@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import ThreeBackground from "./ThreeBackground";
 
 const Hero = () => {
   return (
@@ -14,12 +15,19 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40"></div>
       </div>
 
-      {/* Floating Elements */}
+      {/* Three.js Background */}
+      <ThreeBackground />
+
+      {/* Enhanced Floating Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-16 h-16 bg-amber-400/20 rounded-full animate-float"></div>
-        <div className="absolute top-40 right-32 w-12 h-12 bg-rose-400/20 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-32 left-32 w-20 h-20 bg-orange-400/20 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 right-20 w-14 h-14 bg-amber-400/20 rounded-full animate-float" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-20 left-20 w-16 h-16 bg-amber-400/20 rounded-full animate-float blur-sm"></div>
+        <div className="absolute top-40 right-32 w-12 h-12 bg-rose-400/20 rounded-full animate-float blur-sm" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-32 left-32 w-20 h-20 bg-orange-400/20 rounded-full animate-float blur-sm" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 right-20 w-14 h-14 bg-amber-400/20 rounded-full animate-float blur-sm" style={{ animationDelay: '3s' }}></div>
+        
+        {/* Additional geometric shapes */}
+        <div className="absolute top-1/3 left-1/4 w-8 h-8 border-2 border-white/20 rotate-45 animate-spin-slow"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-6 h-6 border-2 border-amber-300/30 rounded-full animate-ping"></div>
       </div>
       
       {/* Content */}
